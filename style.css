@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, 
+      #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb, 
+      #fbc2eb, #a6c1ee, #ffecd2, #fcb69f);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  transition: 0.5s;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+#mode-select, #symbol-select {
+  margin-bottom: 10px;
+}
+
+#turn-indicator {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+  border: 2px solid #333;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.cell.X {
+  color: #e74c3c;
+}
+
+.cell.O {
+  color: #3498db;
+}
+
+.cell.winner {
+  background-color: #f1c40f !important;
+  color: #fff !important;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.2s;
+}
+
+
+#start {
+  background: linear-gradient(#4CAF50);
+  color: white;
+  box-shadow: 0 4px #2e7d32;
+}
+
+#start:hover {
+  background: linear-gradient#45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px #2e7d32;
+}
+
+
+#reset {
+  background: linear-gradient(#f44336);
+  color: white;
+  box-shadow: 0 4px #c0392b;
+}
+
+#reset:hover {
+  background: linear-gradient(#e53935);
+  transform: translateY(-2px);
+  box-shadow: 0 6px #c0392b;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+
+.cell:hover::before {
+  content: attr(data-hover);
+  position: absolute;
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+
+

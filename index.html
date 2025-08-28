@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div id="timer">Time Left: 10s</div>
+
+  <div id="scoreboard">
+    <span id="player-score">Player: 0</span> |
+    <span id="opponent-score">Opponent: 0</span> |
+    <span id="draw-score">Draws: 0</span>
+  </div>
+
+  <div id="player-names">
+    <input type="text" id="player1-name" placeholder="Player 1 Name" value="Player">
+    <input type="text" id="player2-name" placeholder="Player 2 Name / AI" value="Opponent">
+  </div>
+
+  <div id="mode-select">
+    <label>
+      <input type="radio" name="mode" value="ai" checked> Play vs AI
+    </label>
+    <label>
+      <input type="radio" name="mode" value="friend"> Play with Friend
+    </label>
+  </div>
+
+  <div id="symbol-select">
+    <span>Choose your symbol:</span>
+    <label><input type="radio" name="symbol" value="X" checked> X</label>
+    <label><input type="radio" name="symbol" value="O"> O</label>
+  </div>
+
+  <div id="board-size-select">
+    <label>
+      Board Size:
+      <select id="board-size">
+        <option value="3" selected>3x3</option>
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="turn-indicator">Current Turn: X</div>
+
+  <div id="game-board"></div>
+
+  <button id="start">Start Game</button>
+
+  <button id="reset">Reset Game</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
