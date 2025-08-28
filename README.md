@@ -6,7 +6,7 @@ The game also includes a countdown timer and visual effects like confetti when s
 
 How I made This- HTML, CSS, JavaScript
 
-Special Features (that are not mentioned in the description)- Customizable player and opponent names. Color changing background. There is a reset button if you want to play again.
+Special Features (that is not mentioned in the description)- Customizable player and opponent names. Color changing background. There is a reset button if you want to play again.
 
 How To play- Choose a game mode: vs AI or vs Friend. Select your symbol (X or O) and board size. Click Start Game and take turns until someone wins or it’s a draw.
 
