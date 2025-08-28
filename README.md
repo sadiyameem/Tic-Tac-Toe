@@ -13,5 +13,7 @@ How To play- Choose a game mode: vs AI or vs Friend. Select your symbol (X or O)
 
 Screenshots
 
+<img width="459" height="749" alt="Screenshot 2025-08-28 at 1 38 10 PM" src="https://github.com/user-attachments/assets/5be78939-e839-4702-a4d2-b213286b4318" />
+
 
 License- This project is open-source and free to use
