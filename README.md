@@ -15,3 +15,5 @@ Screenshots
 <img width="459" height="749" alt="Screenshot 2025-08-28 at 1 38 10 PM" src="https://github.com/user-attachments/assets/5be78939-e839-4702-a4d2-b213286b4318" />
 <img width="485" height="156" alt="Screenshot 2025-08-28 at 1 47 13 PM" src="https://github.com/user-attachments/assets/91353460-faf0-4e38-a363-456b37cdc6fe" />
 
+How AI was used in this project- It was used to make it interactive and fun.
+
