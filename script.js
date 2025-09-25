@@ -180,6 +180,7 @@ function aiMove() {
     }
     board[i] = "";
   }
+
 // block player from winning
   for (let i of emptyCells) {
     board[i] = playerSymbol;
@@ -218,6 +219,7 @@ function finalizeAIMove() {
   }
 }
 
+// timer
 function handleClick(e) {
   const index = e.target.dataset.index;
   if(!board[index] && !gameOver && timerRunning){
@@ -245,7 +247,7 @@ function handleClick(e) {
     startTimer();
   }
 }
-// reset timer to start a new game
+// reset to start a new game
 function resetGame(){
   createBoard();
   currentPlayer = playerSymbol; 
