@@ -9,6 +9,9 @@ function createBoard() {
   startCells.forEach((cell, index) => {
     const cellElement = document.createElement("div")
     cellElement.classList.add("square")
+    const circleElement = document.createElement("div")
+    circleElement.classList.add("sqaure")
+    cellElement.append(circleElement)
     gameboard.append(cellElement)
   })
 }
