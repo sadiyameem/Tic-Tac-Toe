@@ -74,4 +74,8 @@ body {
   cursor: pointer;
 }
 
+.winning-square {
+  background-color: lightgreen;
+}
+
 

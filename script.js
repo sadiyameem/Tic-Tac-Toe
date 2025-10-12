@@ -42,6 +42,7 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("circle"))
     if (circleWins) {
       infoDisplay.textContent = "Circle Wins!"
+      array.forEach(cell => allSquares[cell].classList.add("winning-square"))
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
       winner = true
   }
@@ -52,6 +53,7 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("cross"))
     if (crossWins) {
       infoDisplay.textContent = "Cross Wins!"
+      array.forEach(cell => allSquares[cell].classList.add("winning-square"))
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
       winner = true
   }
