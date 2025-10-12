@@ -39,6 +39,16 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("circle"))
     if (circleWins) {
       infoDisplay.textContent = "Circle Wins!"
+      allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
+  }
+  })
+
+    winningCombos.forEach(array => {
+    const crossWins = array.every(cell => 
+      allSquares[cell].firstChild?.classList.contains("cross"))
+    if (crossWins) {
+      infoDisplay.textContent = "Cross Wins!"
+      allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
   }
   })
 }
