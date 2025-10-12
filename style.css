@@ -40,12 +40,27 @@ body {
   height: 90px;
   width: 90px;
   position: relative;
+  transform: rotate(45deg);
 }
 
 .cross:before, .cross:after {
   content: "";
   position: absolute;
   background-color: red;
+}
+
+.cross:before {
+  left: 50%;
+  width: 30%;
+  height: 100%;
+  margin-left: -15%;
+}
+
+.cross:after {
+  top: 50%;
+  height: 30%;
+  width: 100%;
+  margin-top: -15%;
 }
 
 
