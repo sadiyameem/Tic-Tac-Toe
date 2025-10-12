@@ -2,6 +2,11 @@
 const gameboard = document.querySelector("#gameboard")
 const infoDisplay = document.querySelector("#info")
 const startCells = ["", "", "", "", "", "", "", "", ""]
+const circleScoreDisplay = document.querySelector("#circle-score")
+const crossScoreDisplay = document.querySelector("#cross-score")
+
+let circleScore = 0
+let crossScore = 0
 let go = "circle"
 
 infoDisplay.textContent = "Circle goes first"
@@ -42,6 +47,8 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("circle"))
     if (circleWins) {
       infoDisplay.textContent = "Circle Wins!"
+      circleScore++
+      circleScoreDisplay.textContent = "Circle: " + circleScore
       array.forEach(cell => allSquares[cell].classList.add("winning-square"))
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
       winner = true
@@ -53,6 +60,8 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("cross"))
     if (crossWins) {
       infoDisplay.textContent = "Cross Wins!"
+      crossScore++
+      crossScoreDisplay.textContent = "Cross: " + crossScore
       array.forEach(cell => allSquares[cell].classList.add("winning-square"))
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
       winner = true
