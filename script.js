@@ -34,12 +34,16 @@ function checkScore() {
   const winningCombos = [
     [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]
   ]
+
+  let winner = false
+
   winningCombos.forEach(array => {
     const circleWins = array.every(cell => 
       allSquares[cell].firstChild?.classList.contains("circle"))
     if (circleWins) {
       infoDisplay.textContent = "Circle Wins!"
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
+      winner = true
   }
   })
 
@@ -49,8 +53,14 @@ function checkScore() {
     if (crossWins) {
       infoDisplay.textContent = "Cross Wins!"
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true))) //remove any event listeners from all of the squares
+      winner = true
   }
   })
+
+  // draw game
+  if (!winner && [...allSquares].every(square => square.firstChild)) {
+    infoDisplay.textContent = "It's a Draw!"
+  }
 }
 
 
