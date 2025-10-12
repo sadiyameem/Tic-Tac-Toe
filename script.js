@@ -63,4 +63,18 @@ function checkScore() {
   }
 }
 
+// restart button
+const restartButton = document.querySelector("#restart")
+
+restartButton.addEventListener("click", restartGame)
+
+function restartGame() {
+  gameboard.innerHTML = "" // clear board
+  // reset who goes first
+  go = "circle"
+  infoDisplay.textContent = "Circle goes first"
+  // refreash board
+  createBoard()
+}
+
 
